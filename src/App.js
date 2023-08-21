@@ -9,10 +9,14 @@ import Col from 'react-bootstrap/Col';
 
 function App() {
   return (
-    <div>
-      <Container fluid className='frontPage'>
-        <Row className='header0'>
-          <Col>Logo</Col>
+    <>
+    <div className='sticky-header'>
+      <Row>
+          <Col>
+            <a href="https://nicepage.com/" target="_blank" rel="noopener noreferrer">
+              <button className='nicepage-button'><img className='logo0-img' src={require('./images/logo0.png')} height={50} /></button>
+            </a>
+          </Col>
           <Col></Col>
           <Col></Col>
           <Col></Col>
@@ -23,9 +27,13 @@ function App() {
           <Col></Col>
           <Col></Col>
         </Row>
-        <Row className='header1'>
+    </div>
+    <div className='front-page-header'>
+      <Row >
           <Col>
-            <h3>logo</h3>
+            <a href="https://nicepage.com/" target="_blank" rel="noopener noreferrer">
+              <button className='logo-button'><img className='logo1-img' src={require('./images/logo1.png')} height={80} /></button>
+            </a>
           </Col>
           <Col></Col>
           <Col></Col>
@@ -37,10 +45,15 @@ function App() {
           <Col></Col>
           <Col></Col>
           <Col></Col>
-          <Col>image</Col>
-        </Row>
-        <Row className='mainText'>
-          <Col>
+          <Col><img className='bar-img' src={require('./images/bar.png')} height={60} /></Col>
+      </Row>
+    </div>
+    <div className='front-page'>
+      <Container fluid className='frontPage'>
+        
+        
+        <Row className='mainPage'>
+          <Col className='mainText'>
             <Row>
               <h1>Web Software Developers</h1>
             </Row>
@@ -56,18 +69,17 @@ function App() {
               <p>image from Freepik</p>
             </Row>
             <Row>
-              <Col>
               <button className='readmore'>READ MORE</button>
-              </Col>
-              <Col></Col>
             </Row>
           </Col>
-          <Col>Image</Col>
+          <Col>
+            <img className='laptop-img' src={require('./images/laptop.png')} height={550} />
+          </Col>
         </Row>
       </Container>
     </div>
 
-    
+    </>
   );
 }
 
